@@ -16,7 +16,6 @@ class AvisFactory extends Factory
         return [
             'user_id' => User::factory(),
             'animal_id' => Animal::factory(),
-            'note' => $this->faker->numberBetween(1, 5),
             'commentaire' => $this->faker->text(200),
             'date_avis' => $this->faker->dateTimeBetween('-6 months', 'now'),
         ];

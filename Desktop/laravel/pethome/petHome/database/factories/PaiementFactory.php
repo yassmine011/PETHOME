@@ -13,9 +13,9 @@ class PaiementFactory extends Factory
     public function definition()
     {
         return [
-            'commande_id' => Commande::factory(),
+            'commandes_id' => Commande::factory(),
             'montant' => $this->faker->randomFloat(2, 20, 500),
-            'mode_paiement' => $this->faker->randomElement(['carte bancaire', 'paypal', 'virement']),
+            'mode_paiement' => $this->faker->randomElement(['carte', 'paypal', 'virement', 'especes']),
             'date_paiement' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
     }

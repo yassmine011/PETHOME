@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('montant');
             $table->date('date_paiement');
-            $table->enum('methode_paiement', ['carte', 'paypal', 'virement', 'especes']);
+           $table->enum('mode_paiement', ['carte', 'paypal', 'virement', 'especes']);
             $table->enum('statut', ['en_attente', 'complete', 'echoue', 'rembourse']);
             $table->foreignId('commandes_id')->constrained();
             $table->timestamps();

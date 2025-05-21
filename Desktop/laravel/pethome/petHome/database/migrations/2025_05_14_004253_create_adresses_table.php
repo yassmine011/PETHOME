@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('ville');
             $table->string('rue');
-            $table->bigInteger('code_postal');
+            $table->string('code_postal');
             $table->string('pays');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();

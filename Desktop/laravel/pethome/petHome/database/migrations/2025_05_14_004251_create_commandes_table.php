@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('date_commandea');
-            $table->enum('statut', ['en_attente', 'confirmee', 'expediee', 'livree', 'annulee']);
+            $table->date('date_commandea');
+            $table->enum('statut', ['en_attente', 'confirmee', 'expediee', 'livree', 'annulee','en cours'
+]);
             $table->foreignId('user_id')->constrained();
             $table->foreignId('animaux_id')->constrained('animaux');
             $table->timestamps();
@@ -29,3 +30,4 @@ return new class extends Migration
         Schema::dropIfExists('commandes');
     }
 };
+

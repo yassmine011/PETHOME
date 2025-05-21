@@ -36,4 +36,9 @@ class Avis extends Model
     {
         return $this->belongsTo(Animal::class);
     }
+    public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
 }
