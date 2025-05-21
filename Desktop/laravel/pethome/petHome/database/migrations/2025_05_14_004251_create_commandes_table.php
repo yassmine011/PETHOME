@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamp('date_commandea');
             $table->enum('statut', ['en_attente', 'confirmee', 'expediee', 'livree', 'annulee']);
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('animaux_id')->constrained();
+            $table->foreignId('animaux_id')->constrained('animaux');
             $table->timestamps();
         });
     }
